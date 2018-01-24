@@ -11,14 +11,23 @@
   <listener>
     <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
   </listener>
-    <servlet>
-        <servlet-name>CurrencyConverter</servlet-name>
-        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
-    </servlet>
+
+      <servlet>
+          <servlet-name>PersonManagementService</servlet-name>
+          <servlet-class>
+            com.sun.xml.ws.transport.http.servlet.WSServlet
+          </servlet-class>
+          <load-on-startup>1</load-on-startup>
+      </servlet>
 
     <servlet-mapping>
-        <servlet-name>CurrencyConverter</servlet-name>
-        <url-pattern>/convert</url-pattern>
+        <servlet-name>PersonManagementService</servlet-name>
+        <url-pattern>/PersonManagementService</url-pattern>
     </servlet-mapping>
+
+    <mime-mapping>
+        <extension>txt</extension>
+        <mime-type>text/xml</mime-type>
+    </mime-mapping>
 
 </web-app>

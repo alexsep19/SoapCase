@@ -6,7 +6,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-@WebService(endpointInterface = "com.aam.jaxws.server.PersonManagement", serviceName = "PersonManagementService", targetNamespace = "http://com.aam.jaxws.server/")
+@WebService(endpointInterface = "ws.PersonManagement", serviceName = "PersonManagementService",
+            targetNamespace = "http://com.aam.jaxws.server/")
 @BindingType(value = "http://java.sun.com/xml/ns/jaxws/2003/05/soap/bindings/HTTP/")
 public class PersonManagementService implements PersonManagement {
 
