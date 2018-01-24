@@ -5,7 +5,7 @@ import javax.jws.WebService;
 
 @WebService
 public class CurrencyConverter {
-    private final double EXCHANGE_RATE_USD_EUR = 0.89f;
+    private final double EXCHANGE_RATE_USD_EUR = 0.86f;
 
     @WebMethod
     public double usdToEur(double usd) {
