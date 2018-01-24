@@ -13,16 +13,14 @@
   </listener>
 
       <servlet>
-          <servlet-name>PersonManagementService</servlet-name>
-          <servlet-class>
-            com.sun.xml.ws.transport.http.servlet.WSServlet
-          </servlet-class>
+          <servlet-name>CurrencyConverter</servlet-name>
+          <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
           <load-on-startup>1</load-on-startup>
       </servlet>
 
     <servlet-mapping>
-        <servlet-name>PersonManagementService</servlet-name>
-        <url-pattern>/PersonManagementService</url-pattern>
+        <servlet-name>CurrencyConverter</servlet-name>
+        <url-pattern>/convert</url-pattern>
     </servlet-mapping>
 
     <mime-mapping>

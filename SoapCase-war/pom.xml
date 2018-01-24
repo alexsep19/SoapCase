@@ -16,7 +16,7 @@
     <packaging>war</packaging>
 
     <build>
-        <finalName>PersonManagementServer</finalName>
+        <finalName>soapcase</finalName>
         <plugins>
             <plugin>
                 <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/jaxws-maven-plugin -->
@@ -32,12 +32,38 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <sei>ws.PersonManagementService</sei>
+                    <sei>ws.conv.CurrencyConverter</sei>
                     <genWsdl>true</genWsdl>
                     <keep>true</keep>
                     <resourceDestDir>${basedir}/src/main/webapp/WEB-INF/wsdl</resourceDestDir>
                     <sourceDestDir>${basedir}/src/main/java</sourceDestDir>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.0.2</version>
+                <executions>
+                    <execution>
+                        <id>copy</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${deploy.path}</outputDirectory>
+                            <overwrite>true</overwrite>
+                            <resources>
+                                <resource>
+                                    <directory>${project.build.directory}</directory>
+                                    <!--<includes>-->
+                                        <!--<include>${fileName}.${project.packaging}</include>-->
+                                    <!--</includes>-->
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
