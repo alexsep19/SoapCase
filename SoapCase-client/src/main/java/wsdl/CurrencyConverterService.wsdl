@@ -32,7 +32,7 @@
   </binding>
   <service name="CurrencyConverterService">
     <port name="CurrencyConverterPort" binding="tns:CurrencyConverterPortBinding">
-      <soap:address location="REPLACE_WITH_ACTUAL_URL"/>
+      <soap:address location="http://localhost:8080/soapcase/CurrencyConverter"/>
     </port>
   </service>
 </definitions>
